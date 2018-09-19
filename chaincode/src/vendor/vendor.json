@@ -1,0 +1,14 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "3eCJOgwWEnQGXWxNH65fawP8WCE=",
+			"path": "github.com/stellar/go",
+			"revision": "bd60abdbf3aaeeac12f6388c13929908c64cbf3d",
+			"revisionTime": "2018-09-18T17:22:18Z",
+			"tree": true
+		}
+	],
+	"rootPath": "marbles"
+}

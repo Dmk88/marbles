@@ -19,3 +19,6 @@ app_state*
 /config/marbles_dev2.json
 /config/temp.json
 package-lock.json
+**/github.com/**
+**/gopkg.in/**
+**/golang.org/**
