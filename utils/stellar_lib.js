@@ -5,15 +5,10 @@ var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 // Transaction will hold a built transaction we can resubmit if the result is unknown.
 var transaction;
 
-
-
-
 function makePayment( destinationId ,  // public key of the receiver(seller) or marble
                       sourceKeys,      // key pair ( public,private ) of buyer. Buyer would invoke this API through his org's portal so the keys would be available.
                       amount,          // amount to be paid 
                       offerId){        // offerId against which amount is to be paid.
-
-
 
     return new Promise( (resolve,reject) => {
         // First, check to make sure that the destination account exists.
@@ -59,10 +54,7 @@ function makePayment( destinationId ,  // public key of the receiver(seller) or 
             // already built transaction:
             // server.submitTransaction(transaction);
         });
-
     })
-
-
 }
 
 module.exports = makePayment ;
