@@ -193,15 +193,15 @@ func init_marble(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 // Shows off building key's value from GoLang Structure
 //
 // Inputs - Array of Strings
-//           0     ,     1   ,   2
-//      owner id   , username, company
-// "o9999999999999",     bob", "united marbles"
+//           0     ,     1   ,   2             , 3
+//      owner id   , username, company         , stellar accountId
+// "o9999999999999",     bob", "united marbles" , erfaf6c5e4a0ddbd69f4592736986a7596b5b18dec6fde0658f12fb2e6900d81
 // ============================================================================================================================
 func init_owner(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	var err error
 	fmt.Println("starting init_owner")
 
-	if len(args) != 3 {
+	if len(args) != 4 {
 		return shim.Error("Incorrect number of arguments. Expecting 3")
 	}
 
@@ -216,6 +216,7 @@ func init_owner(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	owner.Id = args[0]
 	owner.Username = strings.ToLower(args[1])
 	owner.Company = args[2]
+	owner.AccountId = args[3]
 	owner.Enabled = true
 	fmt.Println(owner)
 
