@@ -84,6 +84,7 @@ func sanitize_arguments(strs []string) error {
 	return nil
 }
 
+// Invoke Stellar APIs to check if payment has been made
 func is_payment_done_for_offer(offer *Offer, accountId, stellar_transaction_id string) (bool, error) {
 
 	var payment horizon.Payment
